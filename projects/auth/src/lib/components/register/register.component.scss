@@ -1,0 +1,267 @@
+:host {
+  display: flex;
+  justify-content: center;
+  min-height: 100%;
+  background: #fece21;
+  background: -webkit-linear-gradient(-135deg, #e3f14c, #70c8eb);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+  min-width: 350px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5%;
+
+  mat-card:not([class*=mat-elevation-z]){
+    box-shadow: none;
+    mat-card-title {
+      font-family: Poppins-Bold;
+      font-weight: bold;
+      font-size: 40px;
+      color: #2c2c2c;
+      line-height: 1.2;
+      text-align: center;
+      width: 100%;
+      display: block;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    mat-card-content {
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        mat-form-field {
+          width: 100%;
+          min-width: 450px;
+          height: 60px;
+          font-family: Arial, Helvetica, sans-serif;
+          margin-top: 10px;
+          margin-bottom: 30px;
+          font-size: 22px;
+          color: #000000;
+          background-color: #dddddd;
+          border-radius: 25px;
+          padding: 0 10px 0 28px;
+          box-shadow: 10px 5px 5px rgb(171, 171, 171);
+        }
+
+        mat-form-field:hover {
+          -webkit-animation: anim-shadow 0.5s ;
+          animation: anim-shadow 0.5s ;
+          color: #5bca47;
+          border-bottom: #5bca47;
+        }
+
+        @-webkit-keyframes anim-shadow {
+          to {
+            box-shadow: 0px 0px 70px 18px;
+          }
+        }
+        
+        @keyframes anim-shadow {
+          to {
+            box-shadow: 0px 0px 70px 18px;
+          }
+        }
+
+        ::ng-deep .mat-form-field-underline{
+          display: none;
+        }
+
+        ::ng-deep .mat-input-element {
+          color: black;
+          caret-color: #000000;
+        }
+
+        ::ng-deep .mat-form-field-subscript-wrapper {
+          margin-top: -0.33333em;
+        }
+
+        ::ng-deep .mat-form-field-flex{
+          padding: 0;
+          background-color: rgba(0,0,0,0);
+        }
+
+        ::ng-deep .mat-form-field-infix{
+          padding: 0;
+        }
+
+        mat-hint,
+        mat-error{
+          color: red;
+          font-size: 20px;
+          margin-top: 15px;
+          margin-bottom: 60px;
+          text-align: center;
+        }
+
+        .password-input button{
+          font-size: 10px;
+          background-color: #dddddd;;
+        }
+
+        .button {
+          display: flex;
+          justify-content: space-between;
+
+          .btn {
+            font-size: 20px;
+            width: 200px;
+            height: 60px;
+            color: #000000;
+            border-radius: 25px;
+            margin-top: 50px;
+          }
+          
+          .register-btn {
+            background-color:  #5bca47;
+          }
+
+          .goback-btn {
+            background-color:  #71c1f3;
+          }
+        }
+      }
+    }
+  }
+}
+
+.container mat-card:not([class*=mat-elevation-z]) mat-card-content form mat-error {
+  color: red;
+  font-size: 20px;
+  margin-top: 32px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+// mobile responsive
+@media screen and (max-width: 450px){
+  .container {
+    display: flex;
+    justify-content: center;
+    margin: 25px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5%;
+  
+    mat-card:not([class*=mat-elevation-z]){
+      box-shadow: none;
+      mat-card-title {
+        font-family: Poppins-Bold;
+        font-weight: bold;
+        font-size: 40px;
+        color: #2c2c2c;
+        line-height: 1.2;
+        text-align: center;
+        width: 100%;
+        display: block;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+  
+      mat-card-content {
+        form {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+  
+          mat-form-field {
+            width: 80%;
+            min-width: 369px;
+            height: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 18px;
+            color: #000000;
+            background-color: #dddddd;
+            border-radius: 25px;
+            padding: 0 10px 0 10px;
+            box-shadow: 4px 2px 7px #ababab;
+          }
+  
+          mat-form-field:hover {
+            -webkit-animation: anim-shadow 0.5s ;
+            animation: anim-shadow 0.5s ;
+            color: #5bca47;
+            border-bottom: #5bca47;
+          }
+  
+          @-webkit-keyframes anim-shadow {
+            to {
+              box-shadow: 0px 0px 70px 18px;
+            }
+          }
+          
+          @keyframes anim-shadow {
+            to {
+              box-shadow: 0px 0px 70px 18px;
+            }
+          }
+  
+          ::ng-deep .mat-form-field-underline{
+            display: none;
+          }
+  
+          ::ng-deep .mat-input-element {
+            color: black;
+            caret-color: #000000;
+          }
+  
+          ::ng-deep .mat-form-field-subscript-wrapper {
+            margin-top: -0.33333em;
+          }
+  
+          mat-hint,
+          mat-error{
+            color: red;
+            font-size: 20px;
+            margin-top: 15px;
+            margin-bottom: 60px;
+            text-align: center;
+          }
+  
+          .password-input button{
+            font-size: 10px;
+            background-color: #dddddd;;
+          }
+  
+          .button {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            margin: 50px auto 0 auto;
+  
+            .btn {
+              font-size: 20px;
+              width: 200px;
+              height: 50px;
+              color: #000000;
+              border-radius: 25px;
+              margin-top: 30px;
+            }
+            
+            .register-btn {
+              background-color:  #5bca47;
+            }
+  
+            .goback-btn {
+              background-color:  #71c1f3;
+            }
+          }
+        }
+      }
+    }
+  }
+}
