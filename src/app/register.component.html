@@ -1,0 +1,19 @@
+ <mat-card-title>SIGN UP</mat-card-title>
+
+            <mat-card-content>
+                <form [formGroup]="form" (ngSubmit)="register()">
+                <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+                    <mat-form-field appearance="fill">
+                        <input type="email" matInput placeholder="Email" formControlName="email" required>
+
+                    </mat-form-field>
+
+                    <mat-form-field class="password-input" appearance="fill">
+                        <input  [type]="hide ? 'password' : 'text'" 
+                                matInput placeholder="Password Confirmation" 
+                        <input  [type]="hide ? 'password' : 'text'"
+                                matInput placeholder="Password Confirmation"
+                                formControlName="passwordConfirm" required
+                        >
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
