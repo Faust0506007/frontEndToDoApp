@@ -52,7 +52,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
       with:
-        repository: Job-Ready-Master/JRM-Todo-app-manifests
+        repository: ${{ secrets.MANIFEST_REPOSITORY }}
         token: ${{ secrets.PAT }}
 
     - name: Set up Kustomize
